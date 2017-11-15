@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1 Canvas</title>
+  </head>
+  <body>
+    <canvas id="mon_canvas" width="400" height="400">
+      Texte alternatif pour les navigateurs ne supportant pas Canvas.
+    </canvas>
+    <script>
+    var c = document.getElementById('mon_canvas');
+    var ctx = c.getContext('2d');
+    ctx.beginPath();
+    ctx.fillStyle = 'rgb(138,9,8)';
+    ctx.moveTo(50,150);
+    ctx.quadraticCurveTo(100,10,150,150);
+    ctx.fill();
+    // Début du chemin
+    ctx.beginPath();
+    ctx.moveTo(50,150);
+    ctx.lineTo(100,300);
+    ctx.lineTo(150,150);
+    ctx.fillStyle = 'rgb(170,101,34)';
+    ctx.fill();
+    </script>
+  </body>
+</html>
